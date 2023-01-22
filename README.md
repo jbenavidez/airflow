@@ -27,18 +27,22 @@ $ docker-compose up -d
 
 ### login 
 On airlow Sign In page, use the following creds
+
+ 
 <ul>
-<li>username:airflow</li>
-<li>password:airflow</li>
+<li> username:airflow  <li>
+<li>  password:airflow <li>
 </ul>
+ 
+![Alt text](/git_images/p2.png "test locally" )
 
 ### Set Postgres and AWS Creds on airflow UI
 on airflow home page -> admin -> connection, click the "plus" to add new connection 
-<ul>
-<li>Postgres connection form 
-</li>
-<li>AWS connection </li>
-</ul>
+ 
+ Postgres connection form 
+![Alt text](/git_images/p1.png "test locally" )
+ 
+ 
   
  
 
