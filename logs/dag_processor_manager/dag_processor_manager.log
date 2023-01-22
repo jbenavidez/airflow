@@ -23406,3 +23406,287 @@ File Path                                 PID    Runtime      # DAGs    # Errors
 /opt/airflow/dags/crypto_currency_etl.py                           1           0  0.18s           2023-01-22T04:44:10
 /opt/airflow/dags/debts_tracker_etl.py                             1           0  0.35s           2023-01-22T04:44:18
 ================================================================================
+[2023-01-22T05:26:00.220+0000] {manager.py:483} INFO - Processing files using up to 2 processes at a time 
+[2023-01-22T05:26:00.223+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2023-01-22T05:26:00.224+0000] {manager.py:485} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2023-01-22T05:26:00.226+0000] {manager.py:726} INFO - Searching for files in /opt/airflow/dags
+[2023-01-22T05:26:00.278+0000] {manager.py:729} INFO - There are 2 files in /opt/airflow/dags
+[2023-01-22T05:26:00.417+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/crypto_currency_etl.py     45  0.05s             0           0
+/opt/airflow/dags/debts_tracker_etl.py       44  0.06s             0           0
+================================================================================
+[2023-01-22T05:26:30.743+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crypto_currency_etl.py     72  0.00s             0           1  0.25s           2023-01-22T05:26:00
+/opt/airflow/dags/debts_tracker_etl.py                             1           0  0.71s           2023-01-22T05:26:01
+================================================================================
+[2023-01-22T05:27:00.999+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crypto_currency_etl.py    100  0.01s             0           1  0.08s           2023-01-22T05:26:30
+/opt/airflow/dags/debts_tracker_etl.py                             1           0  0.18s           2023-01-22T05:26:31
+================================================================================
+[2023-01-22T05:27:31.229+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crypto_currency_etl.py    141  0.01s             0           1  0.09s           2023-01-22T05:27:01
+/opt/airflow/dags/debts_tracker_etl.py                             1           0  0.23s           2023-01-22T05:27:02
+================================================================================
+[2023-01-22T05:28:01.463+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crypto_currency_etl.py    169  0.01s             0           1  0.10s           2023-01-22T05:27:31
+/opt/airflow/dags/debts_tracker_etl.py                             1           0  0.24s           2023-01-22T05:27:32
+================================================================================
+[2023-01-22T05:28:31.694+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crypto_currency_etl.py    210  0.01s             0           1  0.09s           2023-01-22T05:28:01
+/opt/airflow/dags/debts_tracker_etl.py                             1           0  0.22s           2023-01-22T05:28:03
+================================================================================
+[2023-01-22T05:29:01.990+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crypto_currency_etl.py    238  0.00s             0           1  0.14s           2023-01-22T05:28:31
+/opt/airflow/dags/debts_tracker_etl.py                             1           0  0.18s           2023-01-22T05:28:34
+================================================================================
+[2023-01-22T05:29:32.230+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crypto_currency_etl.py    266  0.00s             0           1  0.10s           2023-01-22T05:29:02
+/opt/airflow/dags/debts_tracker_etl.py                             1           0  0.23s           2023-01-22T05:29:04
+================================================================================
+[2023-01-22T05:30:39.896+0000] {manager.py:483} INFO - Processing files using up to 2 processes at a time 
+[2023-01-22T05:30:39.902+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2023-01-22T05:30:39.907+0000] {manager.py:485} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2023-01-22T05:30:39.910+0000] {manager.py:726} INFO - Searching for files in /opt/airflow/dags
+[2023-01-22T05:30:39.984+0000] {manager.py:729} INFO - There are 2 files in /opt/airflow/dags
+[2023-01-22T05:30:40.113+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/crypto_currency_etl.py     46  0.04s             0           0
+/opt/airflow/dags/debts_tracker_etl.py       45  0.05s             0           0
+================================================================================
+[2023-01-22T05:31:10.699+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crypto_currency_etl.py     74  0.01s             1           0  0.48s           2023-01-22T05:30:40
+/opt/airflow/dags/debts_tracker_etl.py                             1           0  0.66s           2023-01-22T05:30:40
+================================================================================
+[2023-01-22T05:31:40.989+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crypto_currency_etl.py    102  0.01s             1           0  0.18s           2023-01-22T05:31:10
+/opt/airflow/dags/debts_tracker_etl.py                             1           0  0.20s           2023-01-22T05:31:11
+================================================================================
+[2023-01-22T05:32:11.283+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crypto_currency_etl.py    143  0.01s             1           0  0.16s           2023-01-22T05:31:41
+/opt/airflow/dags/debts_tracker_etl.py                             1           0  0.18s           2023-01-22T05:31:41
+================================================================================
+[2023-01-22T05:32:41.603+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crypto_currency_etl.py    171  0.01s             1           0  0.17s           2023-01-22T05:32:11
+/opt/airflow/dags/debts_tracker_etl.py                             1           0  0.20s           2023-01-22T05:32:11
+================================================================================
+[2023-01-22T05:33:11.897+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crypto_currency_etl.py    207  0.01s             1           0  0.15s           2023-01-22T05:32:41
+/opt/airflow/dags/debts_tracker_etl.py                             1           0  0.21s           2023-01-22T05:32:41
+================================================================================
+[2023-01-22T05:33:42.336+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crypto_currency_etl.py    256  0.01s             1           0  0.28s           2023-01-22T05:33:12
+/opt/airflow/dags/debts_tracker_etl.py                             1           0  0.38s           2023-01-22T05:33:12
+================================================================================
+[2023-01-22T05:34:12.657+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crypto_currency_etl.py    285  0.01s             1           0  0.15s           2023-01-22T05:33:42
+/opt/airflow/dags/debts_tracker_etl.py      284  0.02s             1           0  0.15s           2023-01-22T05:33:42
+================================================================================
+[2023-01-22T05:34:42.961+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crypto_currency_etl.py    326  0.01s             1           0  0.16s           2023-01-22T05:34:12
+/opt/airflow/dags/debts_tracker_etl.py      325  0.02s             1           0  0.20s           2023-01-22T05:34:12
+================================================================================
+[2023-01-22T05:35:13.313+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/debts_tracker_etl.py      354  0.01s             0           1  0.20s           2023-01-22T05:34:43
+/opt/airflow/dags/crypto_currency_etl.py    355  0.01s             1           0  0.23s           2023-01-22T05:34:43
+================================================================================
+[2023-01-22T05:35:40.621+0000] {manager.py:726} INFO - Searching for files in /opt/airflow/dags
+[2023-01-22T05:35:40.638+0000] {manager.py:729} INFO - There are 2 files in /opt/airflow/dags
+[2023-01-22T05:35:43.643+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crypto_currency_etl.py    391  0.00s             1           0  0.17s           2023-01-22T05:35:13
+/opt/airflow/dags/debts_tracker_etl.py                             1           0  0.29s           2023-01-22T05:35:20
+================================================================================
+[2023-01-22T05:36:13.956+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crypto_currency_etl.py    425  0.01s             1           0  0.15s           2023-01-22T05:35:43
+/opt/airflow/dags/debts_tracker_etl.py                             1           0  0.26s           2023-01-22T05:35:51
+================================================================================
+[2023-01-22T05:36:44.480+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crypto_currency_etl.py    455  0.01s             1           0  0.17s           2023-01-22T05:36:14
+/opt/airflow/dags/debts_tracker_etl.py                             1           0  0.27s           2023-01-22T05:36:31
+================================================================================
+[2023-01-22T05:37:14.809+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crypto_currency_etl.py    496  0.01s             1           0  0.20s           2023-01-22T05:36:44
+/opt/airflow/dags/debts_tracker_etl.py                             1           0  0.19s           2023-01-22T05:37:01
+================================================================================
+[2023-01-22T05:37:45.137+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crypto_currency_etl.py    524  0.00s             1           0  0.20s           2023-01-22T05:37:14
+/opt/airflow/dags/debts_tracker_etl.py                             1           0  0.20s           2023-01-22T05:37:32
+================================================================================
+[2023-01-22T05:38:15.412+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crypto_currency_etl.py    553  0.00s             1           0  0.15s           2023-01-22T05:37:45
+/opt/airflow/dags/debts_tracker_etl.py                             1           0  0.23s           2023-01-22T05:38:02
+================================================================================
+[2023-01-22T05:38:45.706+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crypto_currency_etl.py    594  0.01s             1           0  0.17s           2023-01-22T05:38:15
+/opt/airflow/dags/debts_tracker_etl.py                             1           0  0.17s           2023-01-22T05:38:32
+================================================================================
+[2023-01-22T05:39:15.984+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crypto_currency_etl.py    622  0.00s             1           0  0.15s           2023-01-22T05:38:45
+/opt/airflow/dags/debts_tracker_etl.py                             1           0  0.18s           2023-01-22T05:39:03
+================================================================================
+[2023-01-22T05:39:46.285+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crypto_currency_etl.py    663  0.01s             1           0  0.16s           2023-01-22T05:39:16
+/opt/airflow/dags/debts_tracker_etl.py                             1           0  0.20s           2023-01-22T05:39:33
+================================================================================
+[2023-01-22T05:40:16.599+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crypto_currency_etl.py    691  0.00s             1           0  0.21s           2023-01-22T05:39:46
+/opt/airflow/dags/debts_tracker_etl.py                             1           0  0.18s           2023-01-22T05:40:03
+================================================================================
+[2023-01-22T05:40:40.851+0000] {manager.py:726} INFO - Searching for files in /opt/airflow/dags
+[2023-01-22T05:40:40.870+0000] {manager.py:729} INFO - There are 2 files in /opt/airflow/dags
+[2023-01-22T05:40:46.885+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crypto_currency_etl.py    726  0.00s             1           0  0.16s           2023-01-22T05:40:16
+/opt/airflow/dags/debts_tracker_etl.py                             1           0  0.16s           2023-01-22T05:40:33
+================================================================================
+[2023-01-22T05:41:17.159+0000] {manager.py:854} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/crypto_currency_etl.py    760  0.01s             1           0  0.16s           2023-01-22T05:40:47
+/opt/airflow/dags/debts_tracker_etl.py                             1           0  0.27s           2023-01-22T05:41:04
+================================================================================
