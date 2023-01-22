@@ -36,12 +36,10 @@ On airlow Sign In page, use the following creds
 on airflow home page -> admin -> connection, click the "plus" to add new connection 
 <ul>
 <li>Postgres connection form 
-![Alt text](/git_images/p1.png "test locally" )
 </li>
 <li>AWS connection </li>
 </ul>
- 
-## 
+  
  
 
  
