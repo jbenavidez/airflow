@@ -1,0 +1,25 @@
+[2023-01-22T04:30:30.005+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: debts_tracker_etl.upload_file_to_vendor_s3_location manual__2023-01-22T04:30:22.128940+00:00 [queued]>
+[2023-01-22T04:30:30.016+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: debts_tracker_etl.upload_file_to_vendor_s3_location manual__2023-01-22T04:30:22.128940+00:00 [queued]>
+[2023-01-22T04:30:30.017+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-22T04:30:30.018+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2023-01-22T04:30:30.018+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-22T04:30:30.031+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): upload_file_to_vendor_s3_location> on 2023-01-22 04:30:22.128940+00:00
+[2023-01-22T04:30:30.038+0000] {standard_task_runner.py:55} INFO - Started process 4447 to run task
+[2023-01-22T04:30:30.042+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'debts_tracker_etl', 'upload_file_to_vendor_s3_location', 'manual__2023-01-22T04:30:22.128940+00:00', '--job-id', '86', '--raw', '--subdir', 'DAGS_FOLDER/debts_tracker_etl.py', '--cfg-path', '/tmp/tmpvr4lvzdu']
+[2023-01-22T04:30:30.048+0000] {standard_task_runner.py:83} INFO - Job 86: Subtask upload_file_to_vendor_s3_location
+[2023-01-22T04:30:30.127+0000] {task_command.py:388} INFO - Running <TaskInstance: debts_tracker_etl.upload_file_to_vendor_s3_location manual__2023-01-22T04:30:22.128940+00:00 [running]> on host 4b1c480b6ccb
+[2023-01-22T04:30:30.205+0000] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Tony Stark, Peter Parker
+AIRFLOW_CTX_DAG_ID=debts_tracker_etl
+AIRFLOW_CTX_TASK_ID=upload_file_to_vendor_s3_location
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-22T04:30:22.128940+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-22T04:30:22.128940+00:00
+[2023-01-22T04:30:30.216+0000] {base.py:73} INFO - Using connection ID 'aws_conn' for task execution.
+[2023-01-22T04:30:30.217+0000] {connection_wrapper.py:334} INFO - AWS Connection (conn_id='aws_conn', conn_type='aws') credentials retrieved from login and password.
+[2023-01-22T04:30:31.480+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-01-22T04:30:31.491+0000] {taskinstance.py:1318} INFO - Marking task as SUCCESS. dag_id=debts_tracker_etl, task_id=upload_file_to_vendor_s3_location, execution_date=20230122T043022, start_date=20230122T043030, end_date=20230122T043031
+[2023-01-22T04:30:31.543+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-01-22T04:30:31.563+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

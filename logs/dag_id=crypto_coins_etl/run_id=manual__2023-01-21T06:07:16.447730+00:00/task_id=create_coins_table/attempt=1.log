@@ -1,0 +1,38 @@
+[2023-01-21T06:07:19.678+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: crypto_coins_etl.create_coins_table manual__2023-01-21T06:07:16.447730+00:00 [queued]>
+[2023-01-21T06:07:19.690+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: crypto_coins_etl.create_coins_table manual__2023-01-21T06:07:16.447730+00:00 [queued]>
+[2023-01-21T06:07:19.691+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-21T06:07:19.691+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2023-01-21T06:07:19.692+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-21T06:07:19.705+0000] {taskinstance.py:1300} INFO - Executing <Task(PostgresOperator): create_coins_table> on 2023-01-21 06:07:16.447730+00:00
+[2023-01-21T06:07:19.711+0000] {standard_task_runner.py:55} INFO - Started process 3046 to run task
+[2023-01-21T06:07:19.716+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'crypto_coins_etl', 'create_coins_table', 'manual__2023-01-21T06:07:16.447730+00:00', '--job-id', '67', '--raw', '--subdir', 'DAGS_FOLDER/crypto_coins_etl.py', '--cfg-path', '/tmp/tmpax45v4aa']
+[2023-01-21T06:07:19.719+0000] {standard_task_runner.py:83} INFO - Job 67: Subtask create_coins_table
+[2023-01-21T06:07:19.810+0000] {task_command.py:388} INFO - Running <TaskInstance: crypto_coins_etl.create_coins_table manual__2023-01-21T06:07:16.447730+00:00 [running]> on host ac5a85f5e1cc
+[2023-01-21T06:07:19.883+0000] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=crypto_coins_etl
+AIRFLOW_CTX_TASK_ID=create_coins_table
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-21T06:07:16.447730+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-21T06:07:16.447730+00:00
+[2023-01-21T06:07:19.887+0000] {sql.py:254} INFO - Executing:  CREATE TABLE IF NOT EXISTS coin(             id INT NOT NULL,             name TEXT NOT NULL,             symbol TEXT ,             current_price FLOAT NOT NULL,             high_24h FLOAT NOT NULL,             high_24h FLOAT NOT NULL         );
+[2023-01-21T06:07:19.900+0000] {base.py:73} INFO - Using connection ID 'postgres' for task execution.
+[2023-01-21T06:07:20.157+0000] {base.py:73} INFO - Using connection ID 'postgres' for task execution.
+[2023-01-21T06:07:20.162+0000] {sql.py:375} INFO - Running statement:  CREATE TABLE IF NOT EXISTS coin(             id INT NOT NULL,             name TEXT NOT NULL,             symbol TEXT ,             current_price FLOAT NOT NULL,             high_24h FLOAT NOT NULL,             high_24h FLOAT NOT NULL         );, parameters: None
+[2023-01-21T06:07:20.165+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/operators/sql.py", line 260, in execute
+    output = hook.run(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/hooks/sql.py", line 349, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/common/sql/hooks/sql.py", line 380, in _run_command
+    cur.execute(sql_statement)
+psycopg2.errors.DuplicateColumn: column "high_24h" specified more than once
+
+[2023-01-21T06:07:20.174+0000] {taskinstance.py:1318} INFO - Marking task as FAILED. dag_id=crypto_coins_etl, task_id=create_coins_table, execution_date=20230121T060716, start_date=20230121T060719, end_date=20230121T060720
+[2023-01-21T06:07:20.185+0000] {standard_task_runner.py:100} ERROR - Failed to execute job 67 for task create_coins_table (column "high_24h" specified more than once
+; 3046)
+[2023-01-21T06:07:20.211+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2023-01-21T06:07:20.237+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

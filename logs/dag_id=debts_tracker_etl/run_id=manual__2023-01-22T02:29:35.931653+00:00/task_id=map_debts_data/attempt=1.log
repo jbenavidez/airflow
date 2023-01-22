@@ -1,0 +1,42 @@
+[2023-01-22T02:29:39.445+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: debts_tracker_etl.map_debts_data manual__2023-01-22T02:29:35.931653+00:00 [queued]>
+[2023-01-22T02:29:39.457+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: debts_tracker_etl.map_debts_data manual__2023-01-22T02:29:35.931653+00:00 [queued]>
+[2023-01-22T02:29:39.458+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-22T02:29:39.460+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2023-01-22T02:29:39.461+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-22T02:29:39.475+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): map_debts_data> on 2023-01-22 02:29:35.931653+00:00
+[2023-01-22T02:29:39.481+0000] {standard_task_runner.py:55} INFO - Started process 19870 to run task
+[2023-01-22T02:29:39.486+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'debts_tracker_etl', 'map_debts_data', 'manual__2023-01-22T02:29:35.931653+00:00', '--job-id', '304', '--raw', '--subdir', 'DAGS_FOLDER/debts_tracker_etl.py', '--cfg-path', '/tmp/tmpymu4x0me']
+[2023-01-22T02:29:39.491+0000] {standard_task_runner.py:83} INFO - Job 304: Subtask map_debts_data
+[2023-01-22T02:29:39.574+0000] {task_command.py:388} INFO - Running <TaskInstance: debts_tracker_etl.map_debts_data manual__2023-01-22T02:29:35.931653+00:00 [running]> on host 365d47c8e5b5
+[2023-01-22T02:29:39.644+0000] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Tony Stark, Peter Parker
+AIRFLOW_CTX_DAG_ID=debts_tracker_etl
+AIRFLOW_CTX_TASK_ID=map_debts_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-22T02:29:35.931653+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-22T02:29:35.931653+00:00
+[2023-01-22T02:29:39.658+0000] {logging_mixin.py:137} INFO - ---------------1
+[2023-01-22T02:29:39.659+0000] {logging_mixin.py:137} INFO - the paiytmen {'0': [{'amount': 51.25, 'date': '2020-09-29', 'payment_plan_id': 0}, {'amount': 51.25, 'date': '2020-10-29', 'payment_plan_id': 0}], '1': [{'amount': 25, 'date': '2020-08-08', 'payment_plan_id': 1}, {'amount': 25, 'date': '2020-08-08', 'payment_plan_id': 1}], '2': [{'amount': 4312.67, 'date': '2020-08-08', 'payment_plan_id': 2}], '3': [{'amount': 1230.085, 'date': '2020-08-01', 'payment_plan_id': 3}, {'amount': 1230.085, 'date': '2020-08-08', 'payment_plan_id': 3}, {'amount': 1230.085, 'date': '2020-08-15', 'payment_plan_id': 3}]}
+[2023-01-22T02:29:39.660+0000] {debts_tracker_transformer.py:89} INFO - setting debts is_in_payment_plan flag for debt_id: 0
+[2023-01-22T02:29:39.660+0000] {debts_tracker_transformer.py:40} INFO - Getting payments info for payment_plan_id: 0
+[2023-01-22T02:29:39.661+0000] {debts_tracker_transformer.py:63} INFO - calculating remaining amount for payment_plan_id: 0
+[2023-01-22T02:29:39.661+0000] {debts_tracker_transformer.py:46} INFO - checking if payments are on time
+[2023-01-22T02:29:39.663+0000] {debts_tracker_transformer.py:89} INFO - setting debts is_in_payment_plan flag for debt_id: 1
+[2023-01-22T02:29:39.663+0000] {debts_tracker_transformer.py:40} INFO - Getting payments info for payment_plan_id: 1
+[2023-01-22T02:29:39.664+0000] {debts_tracker_transformer.py:63} INFO - calculating remaining amount for payment_plan_id: 1
+[2023-01-22T02:29:39.665+0000] {debts_tracker_transformer.py:46} INFO - checking if payments are on time
+[2023-01-22T02:29:39.665+0000] {debts_tracker_transformer.py:89} INFO - setting debts is_in_payment_plan flag for debt_id: 2
+[2023-01-22T02:29:39.666+0000] {debts_tracker_transformer.py:40} INFO - Getting payments info for payment_plan_id: 2
+[2023-01-22T02:29:39.667+0000] {debts_tracker_transformer.py:63} INFO - calculating remaining amount for payment_plan_id: 2
+[2023-01-22T02:29:39.667+0000] {debts_tracker_transformer.py:46} INFO - checking if payments are on time
+[2023-01-22T02:29:39.668+0000] {debts_tracker_transformer.py:89} INFO - setting debts is_in_payment_plan flag for debt_id: 3
+[2023-01-22T02:29:39.669+0000] {debts_tracker_transformer.py:40} INFO - Getting payments info for payment_plan_id: 3
+[2023-01-22T02:29:39.669+0000] {debts_tracker_transformer.py:63} INFO - calculating remaining amount for payment_plan_id: 3
+[2023-01-22T02:29:39.670+0000] {debts_tracker_transformer.py:46} INFO - checking if payments are on time
+[2023-01-22T02:29:39.671+0000] {debts_tracker_transformer.py:89} INFO - setting debts is_in_payment_plan flag for debt_id: 4
+[2023-01-22T02:29:39.671+0000] {python.py:177} INFO - Done. Returned value was: [{'amount': 123.46, 'id': 0, 'is_in_payment_plan': True, 'remaining_amount': 0.0, 'is_payment_on_time': False}, {'amount': 100, 'id': 1, 'is_in_payment_plan': True, 'remaining_amount': 50, 'is_payment_on_time': False}, {'amount': 4920.34, 'id': 2, 'is_in_payment_plan': True, 'remaining_amount': 607.6700000000001, 'is_payment_on_time': True}, {'amount': 12938, 'id': 3, 'is_in_payment_plan': True, 'remaining_amount': 622.415, 'is_payment_on_time': True}, {'amount': 9238.02, 'id': 4, 'is_in_payment_plan': False}]
+[2023-01-22T02:29:39.694+0000] {taskinstance.py:1318} INFO - Marking task as SUCCESS. dag_id=debts_tracker_etl, task_id=map_debts_data, execution_date=20230122T022935, start_date=20230122T022939, end_date=20230122T022939
+[2023-01-22T02:29:39.739+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-01-22T02:29:39.764+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

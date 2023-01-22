@@ -1,0 +1,43 @@
+[2023-01-21T21:19:19.409+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: crypto_coins_etl.cal_avg_price_using_coins_historical_data manual__2023-01-21T21:19:11.141759+00:00 [queued]>
+[2023-01-21T21:19:19.421+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: crypto_coins_etl.cal_avg_price_using_coins_historical_data manual__2023-01-21T21:19:11.141759+00:00 [queued]>
+[2023-01-21T21:19:19.421+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-21T21:19:19.422+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2023-01-21T21:19:19.423+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-21T21:19:19.435+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): cal_avg_price_using_coins_historical_data> on 2023-01-21 21:19:11.141759+00:00
+[2023-01-21T21:19:19.443+0000] {standard_task_runner.py:55} INFO - Started process 5251 to run task
+[2023-01-21T21:19:19.448+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'crypto_coins_etl', 'cal_avg_price_using_coins_historical_data', 'manual__2023-01-21T21:19:11.141759+00:00', '--job-id', '217', '--raw', '--subdir', 'DAGS_FOLDER/crypto_coins_etl.py', '--cfg-path', '/tmp/tmpfiu57xad']
+[2023-01-21T21:19:19.452+0000] {standard_task_runner.py:83} INFO - Job 217: Subtask cal_avg_price_using_coins_historical_data
+[2023-01-21T21:19:19.525+0000] {task_command.py:388} INFO - Running <TaskInstance: crypto_coins_etl.cal_avg_price_using_coins_historical_data manual__2023-01-21T21:19:11.141759+00:00 [running]> on host 6256f74551c5
+[2023-01-21T21:19:19.594+0000] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=crypto_coins_etl
+AIRFLOW_CTX_TASK_ID=cal_avg_price_using_coins_historical_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-21T21:19:11.141759+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-21T21:19:11.141759+00:00
+[2023-01-21T21:19:19.608+0000] {crypto_transformer.py:40} INFO - calculate_avg_price bitcoin
+[2023-01-21T21:19:19.918+0000] {crypto_transformer.py:53} INFO - Checking price for bitcoin
+[2023-01-21T21:19:19.919+0000] {crypto_transformer.py:40} INFO - calculate_avg_price ethereum
+[2023-01-21T21:19:20.213+0000] {crypto_transformer.py:53} INFO - Checking price for ethereum
+[2023-01-21T21:19:20.214+0000] {crypto_transformer.py:40} INFO - calculate_avg_price tether
+[2023-01-21T21:19:20.493+0000] {crypto_transformer.py:53} INFO - Checking price for tether
+[2023-01-21T21:19:20.495+0000] {crypto_transformer.py:40} INFO - calculate_avg_price usd-coin
+[2023-01-21T21:19:20.775+0000] {crypto_transformer.py:53} INFO - Checking price for usd-coin
+[2023-01-21T21:19:20.776+0000] {crypto_transformer.py:40} INFO - calculate_avg_price binancecoin
+[2023-01-21T21:19:20.924+0000] {crypto_transformer.py:53} INFO - Checking price for binancecoin
+[2023-01-21T21:19:20.925+0000] {crypto_transformer.py:40} INFO - calculate_avg_price ripple
+[2023-01-21T21:19:21.201+0000] {crypto_transformer.py:53} INFO - Checking price for ripple
+[2023-01-21T21:19:21.202+0000] {crypto_transformer.py:40} INFO - calculate_avg_price binance-usd
+[2023-01-21T21:19:21.492+0000] {crypto_transformer.py:53} INFO - Checking price for binance-usd
+[2023-01-21T21:19:21.494+0000] {crypto_transformer.py:40} INFO - calculate_avg_price cardano
+[2023-01-21T21:19:21.752+0000] {crypto_transformer.py:53} INFO - Checking price for cardano
+[2023-01-21T21:19:21.753+0000] {crypto_transformer.py:40} INFO - calculate_avg_price dogecoin
+[2023-01-21T21:19:22.044+0000] {crypto_transformer.py:53} INFO - Checking price for dogecoin
+[2023-01-21T21:19:22.045+0000] {crypto_transformer.py:40} INFO - calculate_avg_price solana
+[2023-01-21T21:19:22.341+0000] {crypto_transformer.py:53} INFO - Checking price for solana
+[2023-01-21T21:19:22.342+0000] {python.py:177} INFO - Done. Returned value was: [{'id': 'tether', 'symbol': 'usdt', 'name': 'Tether', 'image': 'https://assets.coingecko.com/coins/images/325/large/Tether.png?1668148663', 'current_price': 0.999945, 'market_cap': 66626709093, 'market_cap_rank': 3, 'fully_diluted_valuation': 66626709093, 'total_volume': 55708996316, 'high_24h': 1.005, 'low_24h': 0.988207, 'price_change_24h': -0.001672221670103613, 'price_change_percentage_24h': -0.16695, 'market_cap_change_24h': 333200858, 'market_cap_change_percentage_24h': 0.50261, 'circulating_supply': 66484835812.1458, 'total_supply': 66484835812.1458, 'max_supply': None, 'ath': 1.32, 'ath_change_percentage': -24.34641, 'ath_date': '2018-07-24T00:00:00.000Z', 'atl': 0.572521, 'atl_change_percentage': 74.83535, 'atl_date': '2015-03-02T00:00:00.000Z', 'roi': None, 'last_updated': '2023-01-21T21:15:06.692Z'}, {'id': 'usd-coin', 'symbol': 'usdc', 'name': 'USD Coin', 'image': 'https://assets.coingecko.com/coins/images/6319/large/USD_Coin_icon.png?1547042389', 'current_price': 1.0, 'market_cap': 43400211443, 'market_cap_rank': 4, 'fully_diluted_valuation': 43396394718, 'total_volume': 3667394453, 'high_24h': 1.004, 'low_24h': 0.987488, 'price_change_24h': -0.003269542843824303, 'price_change_percentage_24h': -0.32588, 'market_cap_change_24h': 297780740, 'market_cap_change_percentage_24h': 0.69087, 'circulating_supply': 43352224707.5394, 'total_supply': 43348412202.4294, 'max_supply': None, 'ath': 1.17, 'ath_change_percentage': -14.76063, 'ath_date': '2019-05-08T00:40:28.300Z', 'atl': 0.891848, 'atl_change_percentage': 12.08271, 'atl_date': '2021-05-19T13:14:05.611Z', 'roi': None, 'last_updated': '2023-01-21T21:16:23.503Z'}, {'id': 'binance-usd', 'symbol': 'busd', 'name': 'Binance USD', 'image': 'https://assets.coingecko.com/coins/images/9576/large/BUSD.png?1568947766', 'current_price': 0.998424, 'market_cap': 16188105842, 'market_cap_rank': 7, 'fully_diluted_valuation': 16188105842, 'total_volume': 13913881185, 'high_24h': 1.008, 'low_24h': 0.99123, 'price_change_24h': -0.005284774589581099, 'price_change_percentage_24h': -0.52652, 'market_cap_change_24h': -45607911.568473816, 'market_cap_change_percentage_24h': -0.28095, 'circulating_supply': 16216621579.68, 'total_supply': 16216621579.68, 'max_supply': None, 'ath': 1.15, 'ath_change_percentage': -13.3939, 'ath_date': '2020-03-13T02:35:42.953Z', 'atl': 0.901127, 'atl_change_percentage': 10.92896, 'atl_date': '2021-05-19T13:04:37.445Z', 'roi': None, 'last_updated': '2023-01-21T21:16:45.945Z'}]
+[2023-01-21T21:19:22.365+0000] {taskinstance.py:1318} INFO - Marking task as SUCCESS. dag_id=crypto_coins_etl, task_id=cal_avg_price_using_coins_historical_data, execution_date=20230121T211911, start_date=20230121T211919, end_date=20230121T211922
+[2023-01-21T21:19:22.405+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-01-21T21:19:22.437+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

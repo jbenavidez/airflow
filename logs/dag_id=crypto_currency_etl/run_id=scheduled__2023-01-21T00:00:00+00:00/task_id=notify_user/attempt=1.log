@@ -1,0 +1,23 @@
+[2023-01-22T00:00:18.581+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: crypto_currency_etl.notify_user scheduled__2023-01-21T00:00:00+00:00 [queued]>
+[2023-01-22T00:00:18.593+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: crypto_currency_etl.notify_user scheduled__2023-01-21T00:00:00+00:00 [queued]>
+[2023-01-22T00:00:18.594+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-22T00:00:18.594+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2023-01-22T00:00:18.595+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-22T00:00:18.608+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): notify_user> on 2023-01-21 00:00:00+00:00
+[2023-01-22T00:00:18.615+0000] {standard_task_runner.py:55} INFO - Started process 10317 to run task
+[2023-01-22T00:00:18.618+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'crypto_currency_etl', 'notify_user', 'scheduled__2023-01-21T00:00:00+00:00', '--job-id', '249', '--raw', '--subdir', 'DAGS_FOLDER/crypto_currency_etl.py', '--cfg-path', '/tmp/tmpo6hn9tzt']
+[2023-01-22T00:00:18.622+0000] {standard_task_runner.py:83} INFO - Job 249: Subtask notify_user
+[2023-01-22T00:00:18.709+0000] {task_command.py:388} INFO - Running <TaskInstance: crypto_currency_etl.notify_user scheduled__2023-01-21T00:00:00+00:00 [running]> on host 365d47c8e5b5
+[2023-01-22T00:00:18.780+0000] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=crypto_currency_etl
+AIRFLOW_CTX_TASK_ID=notify_user
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-21T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-21T00:00:00+00:00
+[2023-01-22T00:00:18.795+0000] {python.py:177} INFO - Done. Returned value was: True
+[2023-01-22T00:00:18.821+0000] {taskinstance.py:1318} INFO - Marking task as SUCCESS. dag_id=crypto_currency_etl, task_id=notify_user, execution_date=20230121T000000, start_date=20230122T000018, end_date=20230122T000018
+[2023-01-22T00:00:18.872+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-01-22T00:00:18.898+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

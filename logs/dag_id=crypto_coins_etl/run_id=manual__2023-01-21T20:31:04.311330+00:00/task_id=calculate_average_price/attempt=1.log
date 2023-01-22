@@ -1,0 +1,46 @@
+[2023-01-21T20:31:13.216+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: crypto_coins_etl.calculate_average_price manual__2023-01-21T20:31:04.311330+00:00 [queued]>
+[2023-01-21T20:31:13.229+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: crypto_coins_etl.calculate_average_price manual__2023-01-21T20:31:04.311330+00:00 [queued]>
+[2023-01-21T20:31:13.230+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-21T20:31:13.231+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2023-01-21T20:31:13.231+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-21T20:31:13.244+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): calculate_average_price> on 2023-01-21 20:31:04.311330+00:00
+[2023-01-21T20:31:13.250+0000] {standard_task_runner.py:55} INFO - Started process 2041 to run task
+[2023-01-21T20:31:13.255+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'crypto_coins_etl', 'calculate_average_price', 'manual__2023-01-21T20:31:04.311330+00:00', '--job-id', '150', '--raw', '--subdir', 'DAGS_FOLDER/crypto_coins_etl.py', '--cfg-path', '/tmp/tmp_dfrlhb9']
+[2023-01-21T20:31:13.259+0000] {standard_task_runner.py:83} INFO - Job 150: Subtask calculate_average_price
+[2023-01-21T20:31:13.378+0000] {task_command.py:388} INFO - Running <TaskInstance: crypto_coins_etl.calculate_average_price manual__2023-01-21T20:31:04.311330+00:00 [running]> on host 6256f74551c5
+[2023-01-21T20:31:13.454+0000] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=crypto_coins_etl
+AIRFLOW_CTX_TASK_ID=calculate_average_price
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-21T20:31:04.311330+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-21T20:31:04.311330+00:00
+[2023-01-21T20:31:13.480+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/plugins/transformers/crypto/crypto_transformer.py", line 68, in cal_avg_price
+    results = executor.map(cls._get_avg_price, coins)
+  File "/usr/local/lib/python3.8/concurrent/futures/process.py", line 674, in map
+    results = super().map(partial(_process_chunk, fn),
+  File "/usr/local/lib/python3.8/concurrent/futures/_base.py", line 608, in map
+    fs = [self.submit(fn, *args) for args in zip(*iterables)]
+  File "/usr/local/lib/python3.8/concurrent/futures/_base.py", line 608, in <listcomp>
+    fs = [self.submit(fn, *args) for args in zip(*iterables)]
+  File "/usr/local/lib/python3.8/concurrent/futures/process.py", line 645, in submit
+    self._start_queue_management_thread()
+  File "/usr/local/lib/python3.8/concurrent/futures/process.py", line 584, in _start_queue_management_thread
+    self._adjust_process_count()
+  File "/usr/local/lib/python3.8/concurrent/futures/process.py", line 608, in _adjust_process_count
+    p.start()
+  File "/usr/local/lib/python3.8/multiprocessing/process.py", line 118, in start
+    assert not _current_process._config.get('daemon'), \
+AssertionError: daemonic processes are not allowed to have children
+[2023-01-21T20:31:13.495+0000] {taskinstance.py:1318} INFO - Marking task as FAILED. dag_id=crypto_coins_etl, task_id=calculate_average_price, execution_date=20230121T203104, start_date=20230121T203113, end_date=20230121T203113
+[2023-01-21T20:31:13.507+0000] {standard_task_runner.py:100} ERROR - Failed to execute job 150 for task calculate_average_price (daemonic processes are not allowed to have children; 2041)
+[2023-01-21T20:31:13.549+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2023-01-21T20:31:13.569+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

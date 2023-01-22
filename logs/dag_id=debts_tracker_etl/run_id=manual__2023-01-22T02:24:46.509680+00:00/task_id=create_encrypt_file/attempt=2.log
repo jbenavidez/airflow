@@ -1,0 +1,40 @@
+[2023-01-22T02:24:59.499+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: debts_tracker_etl.create_encrypt_file manual__2023-01-22T02:24:46.509680+00:00 [queued]>
+[2023-01-22T02:24:59.513+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: debts_tracker_etl.create_encrypt_file manual__2023-01-22T02:24:46.509680+00:00 [queued]>
+[2023-01-22T02:24:59.514+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-22T02:24:59.515+0000] {taskinstance.py:1280} INFO - Starting attempt 2 of 2
+[2023-01-22T02:24:59.515+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-22T02:24:59.529+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): create_encrypt_file> on 2023-01-22 02:24:46.509680+00:00
+[2023-01-22T02:24:59.538+0000] {standard_task_runner.py:55} INFO - Started process 19569 to run task
+[2023-01-22T02:24:59.543+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'debts_tracker_etl', 'create_encrypt_file', 'manual__2023-01-22T02:24:46.509680+00:00', '--job-id', '299', '--raw', '--subdir', 'DAGS_FOLDER/debts_tracker_etl.py', '--cfg-path', '/tmp/tmpovk6dfgb']
+[2023-01-22T02:24:59.547+0000] {standard_task_runner.py:83} INFO - Job 299: Subtask create_encrypt_file
+[2023-01-22T02:24:59.626+0000] {task_command.py:388} INFO - Running <TaskInstance: debts_tracker_etl.create_encrypt_file manual__2023-01-22T02:24:46.509680+00:00 [running]> on host 365d47c8e5b5
+[2023-01-22T02:24:59.697+0000] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Tony Stark, Peter Parker
+AIRFLOW_CTX_DAG_ID=debts_tracker_etl
+AIRFLOW_CTX_TASK_ID=create_encrypt_file
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-22T02:24:46.509680+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-22T02:24:46.509680+00:00
+[2023-01-22T02:24:59.711+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/plugins/transformers/debts_tracker/debts_tracker_transformer.py", line 110, in encrypt_debts_data
+    encrypted = fernet.encrypt(debts_data)
+  File "/home/airflow/.local/lib/python3.8/site-packages/cryptography/fernet.py", line 51, in encrypt
+    return self.encrypt_at_time(data, int(time.time()))
+  File "/home/airflow/.local/lib/python3.8/site-packages/cryptography/fernet.py", line 55, in encrypt_at_time
+    return self._encrypt_from_parts(data, current_time, iv)
+  File "/home/airflow/.local/lib/python3.8/site-packages/cryptography/fernet.py", line 60, in _encrypt_from_parts
+    utils._check_bytes("data", data)
+  File "/home/airflow/.local/lib/python3.8/site-packages/cryptography/utils.py", line 33, in _check_bytes
+    raise TypeError("{} must be bytes".format(name))
+TypeError: data must be bytes
+[2023-01-22T02:24:59.722+0000] {taskinstance.py:1318} INFO - Marking task as FAILED. dag_id=debts_tracker_etl, task_id=create_encrypt_file, execution_date=20230122T022446, start_date=20230122T022459, end_date=20230122T022459
+[2023-01-22T02:24:59.734+0000] {standard_task_runner.py:100} ERROR - Failed to execute job 299 for task create_encrypt_file (data must be bytes; 19569)
+[2023-01-22T02:24:59.755+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2023-01-22T02:24:59.774+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

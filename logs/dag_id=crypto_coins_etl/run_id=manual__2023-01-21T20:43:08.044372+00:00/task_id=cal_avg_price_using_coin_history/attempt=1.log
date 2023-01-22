@@ -1,0 +1,46 @@
+[2023-01-21T20:43:15.739+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: crypto_coins_etl.cal_avg_price_using_coin_history manual__2023-01-21T20:43:08.044372+00:00 [queued]>
+[2023-01-21T20:43:15.751+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: crypto_coins_etl.cal_avg_price_using_coin_history manual__2023-01-21T20:43:08.044372+00:00 [queued]>
+[2023-01-21T20:43:15.752+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-21T20:43:15.753+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2023-01-21T20:43:15.753+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-21T20:43:15.766+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): cal_avg_price_using_coin_history> on 2023-01-21 20:43:08.044372+00:00
+[2023-01-21T20:43:15.772+0000] {standard_task_runner.py:55} INFO - Started process 2876 to run task
+[2023-01-21T20:43:15.776+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'crypto_coins_etl', 'cal_avg_price_using_coin_history', 'manual__2023-01-21T20:43:08.044372+00:00', '--job-id', '180', '--raw', '--subdir', 'DAGS_FOLDER/crypto_coins_etl.py', '--cfg-path', '/tmp/tmp0m44tlss']
+[2023-01-21T20:43:15.780+0000] {standard_task_runner.py:83} INFO - Job 180: Subtask cal_avg_price_using_coin_history
+[2023-01-21T20:43:15.859+0000] {task_command.py:388} INFO - Running <TaskInstance: crypto_coins_etl.cal_avg_price_using_coin_history manual__2023-01-21T20:43:08.044372+00:00 [running]> on host 6256f74551c5
+[2023-01-21T20:43:15.929+0000] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=crypto_coins_etl
+AIRFLOW_CTX_TASK_ID=cal_avg_price_using_coin_history
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-21T20:43:08.044372+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-21T20:43:08.044372+00:00
+[2023-01-21T20:43:15.943+0000] {crypto_transformer.py:41} INFO - calculate_avg_price bitcoin
+[2023-01-21T20:43:16.242+0000] {crypto_transformer.py:54} INFO - Checking price for bitcoin
+[2023-01-21T20:43:16.244+0000] {crypto_transformer.py:41} INFO - calculate_avg_price ethereum
+[2023-01-21T20:43:16.557+0000] {crypto_transformer.py:54} INFO - Checking price for ethereum
+[2023-01-21T20:43:16.558+0000] {crypto_transformer.py:41} INFO - calculate_avg_price tether
+[2023-01-21T20:43:16.880+0000] {crypto_transformer.py:54} INFO - Checking price for tether
+[2023-01-21T20:43:16.881+0000] {crypto_transformer.py:41} INFO - calculate_avg_price usd-coin
+[2023-01-21T20:43:17.190+0000] {crypto_transformer.py:54} INFO - Checking price for usd-coin
+[2023-01-21T20:43:17.191+0000] {crypto_transformer.py:41} INFO - calculate_avg_price binancecoin
+[2023-01-21T20:43:17.370+0000] {crypto_transformer.py:54} INFO - Checking price for binancecoin
+[2023-01-21T20:43:17.370+0000] {crypto_transformer.py:41} INFO - calculate_avg_price ripple
+[2023-01-21T20:43:17.654+0000] {crypto_transformer.py:54} INFO - Checking price for ripple
+[2023-01-21T20:43:17.655+0000] {crypto_transformer.py:41} INFO - calculate_avg_price binance-usd
+[2023-01-21T20:43:17.958+0000] {crypto_transformer.py:54} INFO - Checking price for binance-usd
+[2023-01-21T20:43:17.959+0000] {crypto_transformer.py:41} INFO - calculate_avg_price cardano
+[2023-01-21T20:43:18.245+0000] {crypto_transformer.py:54} INFO - Checking price for cardano
+[2023-01-21T20:43:18.246+0000] {crypto_transformer.py:41} INFO - calculate_avg_price dogecoin
+[2023-01-21T20:43:18.543+0000] {crypto_transformer.py:54} INFO - Checking price for dogecoin
+[2023-01-21T20:43:18.544+0000] {crypto_transformer.py:41} INFO - calculate_avg_price solana
+[2023-01-21T20:43:18.858+0000] {crypto_transformer.py:54} INFO - Checking price for solana
+[2023-01-21T20:43:18.860+0000] {logging_mixin.py:137} INFO - ----
+[2023-01-21T20:43:18.861+0000] {logging_mixin.py:137} INFO - must_buy_coins [{'id': 'bitcoin', 'symbol': 'btc', 'current_price': 23162, 'is_valid_to_buy': False, 'avg_price': 21068.69743773949}, {'id': 'ethereum', 'symbol': 'eth', 'current_price': 1657.77, 'is_valid_to_buy': False, 'avg_price': 1550.4303613897966}, {'id': 'tether', 'symbol': 'usdt', 'current_price': 0.999924, 'is_valid_to_buy': True, 'avg_price': 1.0004248657734074}, {'id': 'usd-coin', 'symbol': 'usdc', 'current_price': 1.0, 'is_valid_to_buy': True, 'avg_price': 1.000065194164591}, {'id': 'binancecoin', 'symbol': 'bnb', 'current_price': 303.81, 'is_valid_to_buy': False, 'avg_price': 297.92500318821567}, {'id': 'ripple', 'symbol': 'xrp', 'current_price': 0.412063, 'is_valid_to_buy': False, 'avg_price': 0.3918020866276282}, {'id': 'binance-usd', 'symbol': 'busd', 'current_price': 0.998558, 'is_valid_to_buy': True, 'avg_price': 0.9996293012808688}, {'id': 'cardano', 'symbol': 'ada', 'current_price': 0.374126, 'is_valid_to_buy': False, 'avg_price': 0.3479774261031352}, {'id': 'dogecoin', 'symbol': 'doge', 'current_price': 0.087483, 'is_valid_to_buy': False, 'avg_price': 0.08411247343776314}, {'id': 'solana', 'symbol': 'sol', 'current_price': 25.59, 'is_valid_to_buy': False, 'avg_price': 22.193973729786517}]
+[2023-01-21T20:43:18.862+0000] {logging_mixin.py:137} INFO - ----
+[2023-01-21T20:43:18.863+0000] {python.py:177} INFO - Done. Returned value was: [{'id': 'bitcoin', 'symbol': 'btc', 'current_price': 23162, 'is_valid_to_buy': False, 'avg_price': 21068.69743773949}, {'id': 'ethereum', 'symbol': 'eth', 'current_price': 1657.77, 'is_valid_to_buy': False, 'avg_price': 1550.4303613897966}, {'id': 'tether', 'symbol': 'usdt', 'current_price': 0.999924, 'is_valid_to_buy': True, 'avg_price': 1.0004248657734074}, {'id': 'usd-coin', 'symbol': 'usdc', 'current_price': 1.0, 'is_valid_to_buy': True, 'avg_price': 1.000065194164591}, {'id': 'binancecoin', 'symbol': 'bnb', 'current_price': 303.81, 'is_valid_to_buy': False, 'avg_price': 297.92500318821567}, {'id': 'ripple', 'symbol': 'xrp', 'current_price': 0.412063, 'is_valid_to_buy': False, 'avg_price': 0.3918020866276282}, {'id': 'binance-usd', 'symbol': 'busd', 'current_price': 0.998558, 'is_valid_to_buy': True, 'avg_price': 0.9996293012808688}, {'id': 'cardano', 'symbol': 'ada', 'current_price': 0.374126, 'is_valid_to_buy': False, 'avg_price': 0.3479774261031352}, {'id': 'dogecoin', 'symbol': 'doge', 'current_price': 0.087483, 'is_valid_to_buy': False, 'avg_price': 0.08411247343776314}, {'id': 'solana', 'symbol': 'sol', 'current_price': 25.59, 'is_valid_to_buy': False, 'avg_price': 22.193973729786517}]
+[2023-01-21T20:43:18.895+0000] {taskinstance.py:1318} INFO - Marking task as SUCCESS. dag_id=crypto_coins_etl, task_id=cal_avg_price_using_coin_history, execution_date=20230121T204308, start_date=20230121T204315, end_date=20230121T204318
+[2023-01-21T20:43:18.926+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-01-21T20:43:18.949+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

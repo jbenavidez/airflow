@@ -1,0 +1,25 @@
+[2023-01-22T02:27:07.911+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: debts_tracker_etl.create_encrypt_file manual__2023-01-22T02:27:02.619035+00:00 [queued]>
+[2023-01-22T02:27:07.925+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: debts_tracker_etl.create_encrypt_file manual__2023-01-22T02:27:02.619035+00:00 [queued]>
+[2023-01-22T02:27:07.926+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-22T02:27:07.927+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2023-01-22T02:27:07.927+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-22T02:27:07.942+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): create_encrypt_file> on 2023-01-22 02:27:02.619035+00:00
+[2023-01-22T02:27:07.949+0000] {standard_task_runner.py:55} INFO - Started process 19708 to run task
+[2023-01-22T02:27:07.954+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'debts_tracker_etl', 'create_encrypt_file', 'manual__2023-01-22T02:27:02.619035+00:00', '--job-id', '302', '--raw', '--subdir', 'DAGS_FOLDER/debts_tracker_etl.py', '--cfg-path', '/tmp/tmpi8eqws6q']
+[2023-01-22T02:27:07.958+0000] {standard_task_runner.py:83} INFO - Job 302: Subtask create_encrypt_file
+[2023-01-22T02:27:08.038+0000] {task_command.py:388} INFO - Running <TaskInstance: debts_tracker_etl.create_encrypt_file manual__2023-01-22T02:27:02.619035+00:00 [running]> on host 365d47c8e5b5
+[2023-01-22T02:27:08.144+0000] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Tony Stark, Peter Parker
+AIRFLOW_CTX_DAG_ID=debts_tracker_etl
+AIRFLOW_CTX_TASK_ID=create_encrypt_file
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-22T02:27:02.619035+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-22T02:27:02.619035+00:00
+[2023-01-22T02:27:08.206+0000] {logging_mixin.py:137} INFO - 0-----
+[2023-01-22T02:27:08.207+0000] {logging_mixin.py:137} INFO - b'gAAAAABjzJ789WVhxctVxC2GoVo0TLAMoEahPo6cFwBm99L7JmJAsM9g7JAT8Ujk8nW8MIU_8NhpP9rN1JruoObdpeBbb2c8eHb2hSNH6JTrpXC-o7sQ081vUAFsbrehlJbCIaDHWwg0VQNH-NM84eP-2fJi1ZKTCc-OjUuO4hVwfVtq2gMJjC7zDgtVtYjJvXXxVHp25ddHsFmEhdQ-AIwBSnOXm2D4cemh_aSBTQD3zgA_27_Wu1KZra5OlR1RuaphF37ICuBg8zaKYqPWVGwFrfINbJ3SpPUcR1h3cgXdqsCL4fnHjV7sS7JIJipnpEgiK1U0S-9kiwbKhUkT0MH666BUCFVuPdBgEMP7rp1vQdP3PajnRGY='
+[2023-01-22T02:27:08.207+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-01-22T02:27:08.218+0000] {taskinstance.py:1318} INFO - Marking task as SUCCESS. dag_id=debts_tracker_etl, task_id=create_encrypt_file, execution_date=20230122T022702, start_date=20230122T022707, end_date=20230122T022708
+[2023-01-22T02:27:08.247+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-01-22T02:27:08.267+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

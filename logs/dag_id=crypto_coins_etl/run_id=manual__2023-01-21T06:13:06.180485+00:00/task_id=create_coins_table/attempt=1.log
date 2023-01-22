@@ -1,0 +1,26 @@
+[2023-01-21T06:13:09.318+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: crypto_coins_etl.create_coins_table manual__2023-01-21T06:13:06.180485+00:00 [queued]>
+[2023-01-21T06:13:09.332+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: crypto_coins_etl.create_coins_table manual__2023-01-21T06:13:06.180485+00:00 [queued]>
+[2023-01-21T06:13:09.333+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-21T06:13:09.334+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2023-01-21T06:13:09.334+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-21T06:13:09.347+0000] {taskinstance.py:1300} INFO - Executing <Task(PostgresOperator): create_coins_table> on 2023-01-21 06:13:06.180485+00:00
+[2023-01-21T06:13:09.354+0000] {standard_task_runner.py:55} INFO - Started process 3456 to run task
+[2023-01-21T06:13:09.359+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'crypto_coins_etl', 'create_coins_table', 'manual__2023-01-21T06:13:06.180485+00:00', '--job-id', '84', '--raw', '--subdir', 'DAGS_FOLDER/crypto_coins_etl.py', '--cfg-path', '/tmp/tmp3ls_vp6u']
+[2023-01-21T06:13:09.363+0000] {standard_task_runner.py:83} INFO - Job 84: Subtask create_coins_table
+[2023-01-21T06:13:09.454+0000] {task_command.py:388} INFO - Running <TaskInstance: crypto_coins_etl.create_coins_table manual__2023-01-21T06:13:06.180485+00:00 [running]> on host ac5a85f5e1cc
+[2023-01-21T06:13:09.528+0000] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=crypto_coins_etl
+AIRFLOW_CTX_TASK_ID=create_coins_table
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-21T06:13:06.180485+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-21T06:13:06.180485+00:00
+[2023-01-21T06:13:09.532+0000] {sql.py:254} INFO - Executing:  CREATE TABLE IF NOT EXISTS coin(             id INT  NOT NULL PRIMARY KEY,             name TEXT NOT NULL,             symbol TEXT ,             current_price FLOAT NOT NULL,             high_24h FLOAT NOT NULL,             low_24h FLOAT NOT NULL         );
+[2023-01-21T06:13:09.542+0000] {base.py:73} INFO - Using connection ID 'postgres' for task execution.
+[2023-01-21T06:13:09.806+0000] {base.py:73} INFO - Using connection ID 'postgres' for task execution.
+[2023-01-21T06:13:09.812+0000] {sql.py:375} INFO - Running statement:  CREATE TABLE IF NOT EXISTS coin(             id INT  NOT NULL PRIMARY KEY,             name TEXT NOT NULL,             symbol TEXT ,             current_price FLOAT NOT NULL,             high_24h FLOAT NOT NULL,             low_24h FLOAT NOT NULL         );, parameters: None
+[2023-01-21T06:13:09.822+0000] {taskinstance.py:1318} INFO - Marking task as SUCCESS. dag_id=crypto_coins_etl, task_id=create_coins_table, execution_date=20230121T061306, start_date=20230121T061309, end_date=20230121T061309
+[2023-01-21T06:13:09.854+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-01-21T06:13:09.880+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

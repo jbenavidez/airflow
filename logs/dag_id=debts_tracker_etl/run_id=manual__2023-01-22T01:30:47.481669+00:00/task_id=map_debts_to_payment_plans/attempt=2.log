@@ -1,0 +1,32 @@
+[2023-01-22T01:30:57.354+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: debts_tracker_etl.map_debts_to_payment_plans manual__2023-01-22T01:30:47.481669+00:00 [queued]>
+[2023-01-22T01:30:57.368+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: debts_tracker_etl.map_debts_to_payment_plans manual__2023-01-22T01:30:47.481669+00:00 [queued]>
+[2023-01-22T01:30:57.369+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-22T01:30:57.370+0000] {taskinstance.py:1280} INFO - Starting attempt 2 of 2
+[2023-01-22T01:30:57.370+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-22T01:30:57.387+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): map_debts_to_payment_plans> on 2023-01-22 01:30:47.481669+00:00
+[2023-01-22T01:30:57.396+0000] {standard_task_runner.py:55} INFO - Started process 16077 to run task
+[2023-01-22T01:30:57.407+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'debts_tracker_etl', 'map_debts_to_payment_plans', 'manual__2023-01-22T01:30:47.481669+00:00', '--job-id', '264', '--raw', '--subdir', 'DAGS_FOLDER/debts_tracker_etl.py', '--cfg-path', '/tmp/tmpb_m8zrtt']
+[2023-01-22T01:30:57.430+0000] {standard_task_runner.py:83} INFO - Job 264: Subtask map_debts_to_payment_plans
+[2023-01-22T01:30:57.597+0000] {task_command.py:388} INFO - Running <TaskInstance: debts_tracker_etl.map_debts_to_payment_plans manual__2023-01-22T01:30:47.481669+00:00 [running]> on host 365d47c8e5b5
+[2023-01-22T01:30:57.700+0000] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Tony Stark, Peter Parker
+AIRFLOW_CTX_DAG_ID=debts_tracker_etl
+AIRFLOW_CTX_TASK_ID=map_debts_to_payment_plans
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-22T01:30:47.481669+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-22T01:30:47.481669+00:00
+[2023-01-22T01:30:57.716+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/plugins/transformers/debts_tracker/debts_tracker_transformer.py", line 35, in map_debts_to_plan
+    for item in debts:
+TypeError: 'NoneType' object is not iterable
+[2023-01-22T01:30:57.729+0000] {taskinstance.py:1318} INFO - Marking task as FAILED. dag_id=debts_tracker_etl, task_id=map_debts_to_payment_plans, execution_date=20230122T013047, start_date=20230122T013057, end_date=20230122T013057
+[2023-01-22T01:30:57.743+0000] {standard_task_runner.py:100} ERROR - Failed to execute job 264 for task map_debts_to_payment_plans ('NoneType' object is not iterable; 16077)
+[2023-01-22T01:30:57.782+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2023-01-22T01:30:57.804+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

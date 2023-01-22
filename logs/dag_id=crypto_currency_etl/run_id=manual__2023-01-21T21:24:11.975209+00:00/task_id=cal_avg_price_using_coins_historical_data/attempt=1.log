@@ -1,0 +1,51 @@
+[2023-01-21T21:24:22.757+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: crypto_currency_etl.cal_avg_price_using_coins_historical_data manual__2023-01-21T21:24:11.975209+00:00 [queued]>
+[2023-01-21T21:24:22.768+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: crypto_currency_etl.cal_avg_price_using_coins_historical_data manual__2023-01-21T21:24:11.975209+00:00 [queued]>
+[2023-01-21T21:24:22.769+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-21T21:24:22.770+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2023-01-21T21:24:22.771+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-21T21:24:22.784+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): cal_avg_price_using_coins_historical_data> on 2023-01-21 21:24:11.975209+00:00
+[2023-01-21T21:24:22.789+0000] {standard_task_runner.py:55} INFO - Started process 170 to run task
+[2023-01-21T21:24:22.794+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'crypto_currency_etl', 'cal_avg_price_using_coins_historical_data', 'manual__2023-01-21T21:24:11.975209+00:00', '--job-id', '231', '--raw', '--subdir', 'DAGS_FOLDER/crypto_currency_etl.py', '--cfg-path', '/tmp/tmppl7ixs33']
+[2023-01-21T21:24:22.798+0000] {standard_task_runner.py:83} INFO - Job 231: Subtask cal_avg_price_using_coins_historical_data
+[2023-01-21T21:24:22.873+0000] {task_command.py:388} INFO - Running <TaskInstance: crypto_currency_etl.cal_avg_price_using_coins_historical_data manual__2023-01-21T21:24:11.975209+00:00 [running]> on host 365d47c8e5b5
+[2023-01-21T21:24:22.947+0000] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=crypto_currency_etl
+AIRFLOW_CTX_TASK_ID=cal_avg_price_using_coins_historical_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-21T21:24:11.975209+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-21T21:24:11.975209+00:00
+[2023-01-21T21:24:22.965+0000] {crypto_transformer.py:40} INFO - calculate_avg_price bitcoin
+[2023-01-21T21:24:23.286+0000] {crypto_transformer.py:53} INFO - Checking price for bitcoin
+[2023-01-21T21:24:23.287+0000] {crypto_transformer.py:40} INFO - calculate_avg_price ethereum
+[2023-01-21T21:24:23.602+0000] {crypto_transformer.py:53} INFO - Checking price for ethereum
+[2023-01-21T21:24:23.603+0000] {crypto_transformer.py:40} INFO - calculate_avg_price tether
+[2023-01-21T21:24:23.925+0000] {crypto_transformer.py:53} INFO - Checking price for tether
+[2023-01-21T21:24:23.926+0000] {crypto_transformer.py:40} INFO - calculate_avg_price usd-coin
+[2023-01-21T21:24:24.211+0000] {crypto_transformer.py:53} INFO - Checking price for usd-coin
+[2023-01-21T21:24:24.212+0000] {crypto_transformer.py:40} INFO - calculate_avg_price binancecoin
+[2023-01-21T21:24:24.484+0000] {crypto_transformer.py:53} INFO - Checking price for binancecoin
+[2023-01-21T21:24:24.486+0000] {crypto_transformer.py:40} INFO - calculate_avg_price ripple
+[2023-01-21T21:24:24.762+0000] {crypto_transformer.py:53} INFO - Checking price for ripple
+[2023-01-21T21:24:24.763+0000] {crypto_transformer.py:40} INFO - calculate_avg_price binance-usd
+[2023-01-21T21:24:25.042+0000] {crypto_transformer.py:53} INFO - Checking price for binance-usd
+[2023-01-21T21:24:25.043+0000] {crypto_transformer.py:40} INFO - calculate_avg_price cardano
+[2023-01-21T21:24:25.302+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/plugins/transformers/crypto/crypto_transformer.py", line 67, in cal_avg_price
+    check_coin = cls._get_avg_price(coin)
+  File "/opt/airflow/plugins/transformers/crypto/crypto_transformer.py", line 42, in _get_avg_price
+    coin_history = HttpServices.get_coin_price_history(coin_id)
+  File "/opt/airflow/plugins/services/http_services.py", line 26, in get_coin_price_history
+    return response.json()['prices']
+KeyError: 'prices'
+[2023-01-21T21:24:25.323+0000] {taskinstance.py:1318} INFO - Marking task as FAILED. dag_id=crypto_currency_etl, task_id=cal_avg_price_using_coins_historical_data, execution_date=20230121T212411, start_date=20230121T212422, end_date=20230121T212425
+[2023-01-21T21:24:25.362+0000] {standard_task_runner.py:100} ERROR - Failed to execute job 231 for task cal_avg_price_using_coins_historical_data ('prices'; 170)
+[2023-01-21T21:24:25.405+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2023-01-21T21:24:25.455+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

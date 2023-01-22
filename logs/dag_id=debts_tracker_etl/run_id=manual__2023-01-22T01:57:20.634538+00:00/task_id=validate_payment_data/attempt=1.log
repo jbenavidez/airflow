@@ -1,0 +1,40 @@
+[2023-01-22T01:57:24.799+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: debts_tracker_etl.validate_payment_data manual__2023-01-22T01:57:20.634538+00:00 [queued]>
+[2023-01-22T01:57:24.813+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: debts_tracker_etl.validate_payment_data manual__2023-01-22T01:57:20.634538+00:00 [queued]>
+[2023-01-22T01:57:24.814+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-22T01:57:24.815+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2023-01-22T01:57:24.816+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-22T01:57:24.828+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): validate_payment_data> on 2023-01-22 01:57:20.634538+00:00
+[2023-01-22T01:57:24.835+0000] {standard_task_runner.py:55} INFO - Started process 17798 to run task
+[2023-01-22T01:57:24.839+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'debts_tracker_etl', 'validate_payment_data', 'manual__2023-01-22T01:57:20.634538+00:00', '--job-id', '287', '--raw', '--subdir', 'DAGS_FOLDER/debts_tracker_etl.py', '--cfg-path', '/tmp/tmphnh_zmqn']
+[2023-01-22T01:57:24.843+0000] {standard_task_runner.py:83} INFO - Job 287: Subtask validate_payment_data
+[2023-01-22T01:57:24.919+0000] {task_command.py:388} INFO - Running <TaskInstance: debts_tracker_etl.validate_payment_data manual__2023-01-22T01:57:20.634538+00:00 [running]> on host 365d47c8e5b5
+[2023-01-22T01:57:24.986+0000] {taskinstance.py:1507} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Tony Stark, Peter Parker
+AIRFLOW_CTX_DAG_ID=debts_tracker_etl
+AIRFLOW_CTX_TASK_ID=validate_payment_data
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-22T01:57:20.634538+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-22T01:57:20.634538+00:00
+[2023-01-22T01:57:25.000+0000] {logging_mixin.py:137} INFO - ---------------1
+[2023-01-22T01:57:25.001+0000] {logging_mixin.py:137} INFO - the paiytmen {'0': [{'amount': 51.25, 'date': '2020-09-29', 'payment_plan_id': 0}, {'amount': 51.25, 'date': '2020-10-29', 'payment_plan_id': 0}], '1': [{'amount': 25, 'date': '2020-08-08', 'payment_plan_id': 1}, {'amount': 25, 'date': '2020-08-08', 'payment_plan_id': 1}], '2': [{'amount': 4312.67, 'date': '2020-08-08', 'payment_plan_id': 2}], '3': [{'amount': 1230.085, 'date': '2020-08-01', 'payment_plan_id': 3}, {'amount': 1230.085, 'date': '2020-08-08', 'payment_plan_id': 3}, {'amount': 1230.085, 'date': '2020-08-15', 'payment_plan_id': 3}]}
+[2023-01-22T01:57:25.002+0000] {debts_tracker_transformer.py:79} INFO - setting debts is_in_payment_plan flag for debt_id: 0
+[2023-01-22T01:57:25.003+0000] {debts_tracker_transformer.py:30} INFO - Getting payments info for payment_plan_id: 0
+[2023-01-22T01:57:25.004+0000] {debts_tracker_transformer.py:53} INFO - calculating remaining amount for payment_plan_id: 0
+[2023-01-22T01:57:25.004+0000] {debts_tracker_transformer.py:36} INFO - checking if payments are on time
+[2023-01-22T01:57:25.006+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/plugins/transformers/debts_tracker/debts_tracker_transformer.py", line 89, in validate_payment_data
+    is_payment_on_time = cls.check_if_payment_on_time(payments, payment_plan['installment_frequency'])
+  File "/opt/airflow/plugins/transformers/debts_tracker/debts_tracker_transformer.py", line 41, in check_if_payment_on_time
+    if diff.days != cls.payment_frecuency[installment_frequency]:
+AttributeError: type object 'DebtsTrackerTransformers' has no attribute 'payment_frecuency'
+[2023-01-22T01:57:25.019+0000] {taskinstance.py:1318} INFO - Marking task as UP_FOR_RETRY. dag_id=debts_tracker_etl, task_id=validate_payment_data, execution_date=20230122T015720, start_date=20230122T015724, end_date=20230122T015725
+[2023-01-22T01:57:25.030+0000] {standard_task_runner.py:100} ERROR - Failed to execute job 287 for task validate_payment_data (type object 'DebtsTrackerTransformers' has no attribute 'payment_frecuency'; 17798)
+[2023-01-22T01:57:25.052+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2023-01-22T01:57:25.072+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check
