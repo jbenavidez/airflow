@@ -3,3 +3,9 @@ __pycache__/
 *$py.class
 
 /.vscode
+
+htmlcov/
+
+.DS_Store
+# exclude everything
+logs/*

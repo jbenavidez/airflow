@@ -1,5 +1,2 @@
 *
 !.gitignore
-
-# exclude everything
-logs/*

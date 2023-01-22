@@ -4156,3 +4156,24 @@ airflow.exceptions.AirflowNotFoundException: The conn_id `postgres` isn't define
 [2023-01-22T05:42:17.775+0000] {logging_mixin.py:137} INFO - [2023-01-22T05:42:17.775+0000] {dag.py:2690} INFO - Sync 1 DAGs
 [2023-01-22T05:42:17.801+0000] {logging_mixin.py:137} INFO - [2023-01-22T05:42:17.801+0000] {dag.py:3437} INFO - Setting next_dagrun for crypto_currency_etl to 2023-01-21T05:42:17.801099+00:00, run_after=2023-01-22T05:42:17.801099+00:00
 [2023-01-22T05:42:17.822+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/crypto_currency_etl.py took 0.133 seconds
+[2023-01-22T05:42:47.972+0000] {processor.py:153} INFO - Started process (PID=857) to work on /opt/airflow/dags/crypto_currency_etl.py
+[2023-01-22T05:42:47.974+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/crypto_currency_etl.py for tasks to queue
+[2023-01-22T05:42:47.975+0000] {logging_mixin.py:137} INFO - [2023-01-22T05:42:47.975+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/crypto_currency_etl.py
+[2023-01-22T05:42:48.015+0000] {processor.py:753} INFO - DAG(s) dict_keys(['crypto_currency_etl']) retrieved from /opt/airflow/dags/crypto_currency_etl.py
+[2023-01-22T05:42:48.046+0000] {logging_mixin.py:137} INFO - [2023-01-22T05:42:48.046+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-01-22T05:42:48.072+0000] {logging_mixin.py:137} INFO - [2023-01-22T05:42:48.071+0000] {dag.py:3437} INFO - Setting next_dagrun for crypto_currency_etl to 2023-01-21T05:42:48.071589+00:00, run_after=2023-01-22T05:42:48.071589+00:00
+[2023-01-22T05:42:48.088+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/crypto_currency_etl.py took 0.121 seconds
+[2023-01-22T05:43:18.254+0000] {processor.py:153} INFO - Started process (PID=898) to work on /opt/airflow/dags/crypto_currency_etl.py
+[2023-01-22T05:43:18.258+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/crypto_currency_etl.py for tasks to queue
+[2023-01-22T05:43:18.261+0000] {logging_mixin.py:137} INFO - [2023-01-22T05:43:18.261+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/crypto_currency_etl.py
+[2023-01-22T05:43:18.314+0000] {processor.py:753} INFO - DAG(s) dict_keys(['crypto_currency_etl']) retrieved from /opt/airflow/dags/crypto_currency_etl.py
+[2023-01-22T05:43:18.346+0000] {logging_mixin.py:137} INFO - [2023-01-22T05:43:18.346+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-01-22T05:43:18.373+0000] {logging_mixin.py:137} INFO - [2023-01-22T05:43:18.373+0000] {dag.py:3437} INFO - Setting next_dagrun for crypto_currency_etl to 2023-01-21T05:43:18.372727+00:00, run_after=2023-01-22T05:43:18.372727+00:00
+[2023-01-22T05:43:18.394+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/crypto_currency_etl.py took 0.149 seconds
+[2023-01-22T05:43:48.539+0000] {processor.py:153} INFO - Started process (PID=926) to work on /opt/airflow/dags/crypto_currency_etl.py
+[2023-01-22T05:43:48.541+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/crypto_currency_etl.py for tasks to queue
+[2023-01-22T05:43:48.542+0000] {logging_mixin.py:137} INFO - [2023-01-22T05:43:48.542+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/crypto_currency_etl.py
+[2023-01-22T05:43:48.575+0000] {processor.py:753} INFO - DAG(s) dict_keys(['crypto_currency_etl']) retrieved from /opt/airflow/dags/crypto_currency_etl.py
+[2023-01-22T05:43:48.603+0000] {logging_mixin.py:137} INFO - [2023-01-22T05:43:48.603+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-01-22T05:43:48.633+0000] {logging_mixin.py:137} INFO - [2023-01-22T05:43:48.633+0000] {dag.py:3437} INFO - Setting next_dagrun for crypto_currency_etl to 2023-01-21T05:43:48.632836+00:00, run_after=2023-01-22T05:43:48.632836+00:00
+[2023-01-22T05:43:48.651+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/crypto_currency_etl.py took 0.116 seconds
