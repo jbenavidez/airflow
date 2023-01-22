@@ -39,7 +39,6 @@ on airflow home page -> admin -> connection, click the "plus" to add new connect
 ![Alt text](/git_images/p1.png "test locally" )
 </li>
 <li>AWS connection </li>
-![Alt text](/git_images/p2.png "test locally" )
 </ul>
  
 ## 
