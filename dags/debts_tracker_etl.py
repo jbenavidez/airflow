@@ -30,17 +30,17 @@ with DAG("debts_tracker_etl",catchup=False , default_args= default_args) as dag:
     python_callable=DebtsTrackerTransformers.map_debts_data
     )
 
-    # create_encrypt_file = PythonOperator(
-    # task_id='create_encrypt_file',
-    # python_callable=DebtsTrackerTransformers.encrypt_debts_data,
-    # op_kwargs={'file_url':encrypt_file_url}
-    # )
+    create_encrypt_file = PythonOperator(
+    task_id='create_encrypt_file',
+    python_callable=DebtsTrackerTransformers.encrypt_debts_data,
+    op_kwargs={'file_url':encrypt_file_url}
+    )
 
-    # upload_file_to_vendor_s3_location = PythonOperator(
-    # task_id='upload_file_to_vendor_s3_location',
-    # python_callable=DebtsTrackerTransformers.upload_file_to_vendor_s3_folder,
-    # op_kwargs={'source_file':encrypt_file_url}
-    # )
+    upload_file_to_vendor_s3_location = PythonOperator(
+    task_id='upload_file_to_vendor_s3_location',
+    python_callable=DebtsTrackerTransformers.upload_file_to_vendor_s3_folder,
+    op_kwargs={'source_file':encrypt_file_url}
+    )
 
     # upload_file = SFTPOperator(
     #     task_id="put-file",
@@ -49,7 +49,7 @@ with DAG("debts_tracker_etl",catchup=False , default_args= default_args) as dag:
     #     local_filepath="/tmp/{{ run_id }}/output.csv",
     #     operation="put"
     # )
-    load_debts_data  >> map_debts_data
-    #  >> create_encrypt_file >> \
-    # upload_file_to_vendor_s3_location
+    load_debts_data  >> map_debts_data  >> create_encrypt_file >> \
+    upload_file_to_vendor_s3_location
+ 
 
