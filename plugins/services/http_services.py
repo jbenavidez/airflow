@@ -11,7 +11,7 @@ class HttpServices:
     @classmethod 
     def get_coins(cls) -> List[Dict]:
         """This function will get the top 10 coins at the current time, sorted by market cap in desc order."""
-        response = requests.get('{cls.coins_base_url}markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false')
+        response = requests.get(f'{cls.coins_base_url}markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false')
         return response.json()
 
     @classmethod 

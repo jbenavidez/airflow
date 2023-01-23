@@ -12,7 +12,7 @@ from pandas import json_normalize
 
 default_args = {
     'owner': 'Bruce Wayne, Jason Todd',
-    'start_date': datetime(2023, 1, 21),
+    'start_date': datetime(2023, 1, 22),
     'retries': 1,
     'retry_delay': timedelta(seconds=5),
     'schedule_interval':"@daily"
@@ -32,7 +32,7 @@ with DAG("crypto_currency_etl", catchup=False,  default_args= default_args) as d
 
     create_coins_table = PostgresOperator(
     task_id="create_coins_table",
-    postgres_conn_id= "http_default",
+    postgres_conn_id= "postgres",
     sql = " CREATE TABLE IF NOT EXISTS coins( \
             id BIGSERIAL PRIMARY KEY, \
             name TEXT , \
