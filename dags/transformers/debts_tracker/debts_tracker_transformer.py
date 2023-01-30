@@ -88,7 +88,7 @@ class DebtsTrackerTransformers:
         cls.payments = debts_data.get("payments")
 
         print("---------------1")
-        print("the paiytmen", cls.payments)
+        print("the payment", cls.payments)
         debts_list = []
         #init mapping 
         for debt_k, v in debts_objs.items():
