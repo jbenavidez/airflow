@@ -41,14 +41,19 @@ On airlow Sign In page, use the following credentials
 
 ![Alt text](/git_images/p2.png "test locally" )
 
-## Set Postgres and AWS Creds on airflow UI
+### Set Postgres and AWS Creds on airflow UI
 
 on airflow home page -> admin -> connection, click the "plus" to add new connection 
  
- Postgres connection form 
+ Postgres connection attributes 
 ![Alt text](/git_images/p1.png "test locally" )
 
+### Set Postgres and AWS Creds on airflow UI
 
+on airflow home page -> admin -> connection, click the "plus" to add new connection 
+ 
+ AWS connection attributes 
+![Alt text](/git_images/p3.png "test locally" )
  
 
 ## Test 
