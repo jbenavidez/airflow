@@ -1,10 +1,10 @@
 # Airlow
 
-Task Orchestration  with Airflow 
+Orchestration with Airflow.
 
 ## Description
 
-This project contains multiples ETLs to handle different bussiness logic
+This project contains multiples ETLs to handle different bussiness logic.
 
 ## Getting Started
 
@@ -19,7 +19,7 @@ This project contains multiples ETLs to handle different bussiness logic
 ### Installing
 
 * Install docker in your machine.
-* 
+
 
 ### Executing program
 
@@ -53,7 +53,7 @@ on airflow home page -> admin -> connection, click the "plus" to add new connect
 
 ## Test 
 
-Test your dag task using the following command
+Test your dag task using the following command:
 ```
 airflow tasks test <dag_id>  <tastk_id> 2022-01-01
 ```
