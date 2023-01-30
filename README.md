@@ -56,7 +56,7 @@ on airflow home page -> admin -> connection, click the "plus" to add new connect
 
 ## Test 
 
-Test your dag task using the following command:
+Test one or multiples Dag tasks using the following command:
 ```
 airflow tasks test <dag_id>  <tastk_id> 2022-01-01
 ```
